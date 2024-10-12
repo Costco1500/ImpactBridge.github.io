@@ -25,6 +25,17 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+    /* New Transition Properties */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 1; /* Fully visible by default */
+    transform: translateY(0); /* No translation by default */
+}
+
+header.hidden {
+    opacity: 0; /* Fully transparent */
+    transform: translateY(-100%); /* Move header out of view */
+    pointer-events: none; /* Disable interactions when hidden */
 }
 
 header h1 {
@@ -92,6 +103,7 @@ header nav ul li a:hover {
     font-size: 20px;
     margin-bottom: 30px;
 }
+
 
 /* Interests Form Section */
 .interests-form {
