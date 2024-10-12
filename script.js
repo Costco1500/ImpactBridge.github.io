@@ -53,18 +53,18 @@ const opportunities = {
         { role: "Community Outreach", interest: "Education", url: "https://uwbb.org/student-united-way/" }
     ],
 
-    // Misc
+    //Helper
     "Big Bends for Humanity": [
-        { role: "Project Builder", interest: "Projects", url: "https://bigbendhabitat.org/volunteer/" }
+        { role: "Project Builder", interest: "Helper", url: "https://bigbendhabitat.org/volunteer/" }
     ],
     "Goat House Farm": [
-        { role: "Take care of goats", interest: "Projects", url: "https://leoncountyfl.galaxydigital.com/need/detail/?need_id=684698" }
+        { role: "Take care of goats", interest: "Helper", url: "https://leoncountyfl.galaxydigital.com/need/detail/?need_id=684698" }
     ],
     "Alfred B Maclay Gardens": [
-        { role: "Volunteer at the garden", interest: "Projects", url: "https://leoncountyfl.galaxydigital.com/need/detail/?need_id=150811" }
+        { role: "Volunteer at the garden", interest: "Helper", url: "https://leoncountyfl.galaxydigital.com/need/detail/?need_id=150811" }
     ],
     "Animal Service Center": [
-        { role: "Animal helper", interest: "Projects", url: "https://www.talgov.com/animals/asc-volunteer" }
+        { role: "Animal helper", interest: "Helper", url: "https://www.talgov.com/animals/asc-volunteer" }
     ],
 
     // Elderly Support
@@ -140,5 +140,32 @@ document.addEventListener('DOMContentLoaded', function () {
     sections.forEach(section => {
         section.classList.add('fade-in');
         fadeInObserver.observe(section);
+    });
+});
+// script.js
+
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('header');
+    let lastScrollPosition = window.pageYOffset;
+    let ticking = false;
+
+    window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                if (currentScroll > lastScrollPosition && currentScroll > header.offsetHeight) {
+                    // Scrolling down and past the header height
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+                lastScrollPosition = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+                ticking = false;
+            });
+
+            ticking = true;
+        }
     });
 });
