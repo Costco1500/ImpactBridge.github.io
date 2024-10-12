@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactBridge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>ImpactBridge</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="partners.html">Partners</a></li> <!-- New Partners Link -->
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Find the Perfect Volunteer Opportunity for You!</h2>
+            <p>Connecting High Schoolers with impactful opportunities in Tallahassee.</p>
+        </div>
+    </section>
+
+   
+
+    <!-- Volunteer Interests Form Section -->
+    <section class="interests-form" id="interests">
+        <div class="container">
+            <h2>Select Your Interest</h2>
+            <form id="volunteer-interests-form">
+                <div class="interest-dropdown">
+                    <select id="interest-select">
+                        <option value="" disabled selected>Select an Interest</option>
+                        <option value="Medicine">Medicine</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Canned Food Drives">Canned Food Drives</option>
+                        <option value="Education">Education</option>
+                        <option value="Elderly Support">Elderly Support</option>
+                        <option value="Projects">Projects</option>
+                    </select>
+                </div>
+                <button type="button" onclick="matchOpportunities()">Find Matches</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Matching Volunteer Opportunities Section -->
+    <section class="volunteer" id="volunteer">
+        <div class="container">
+            <h2>Volunteer Opportunities</h2>
+            <div id="matched-opportunities">
+                <p>Submit your interests to see matching opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have a nonprofit or volunteer opportunities you'd like to add to our platform, please email <a href="mailto:impactbridge1500@gmail.com">impactbridge1500@gmail.com</a>. Provide your organization's name, a description of the volunteer opportunities, and any other relevant details.</p>
+            <p>If you have any questions or suggestions for us, feel free to reach out via email at <a href="mailto:impactbridge1500@gmail.com">impactbridge1500@gmail.com</a>.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ImpactBridge. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
